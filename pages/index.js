@@ -27,7 +27,7 @@ class ErrorBoundary extends Component {
 
 // NOTE Wrapping the suspending component in this one will only render it on the client.
 // That does not change the behavior of the bug so I've left it out.
-// The bug does not seem to be server rendering or hydration specific though.
+// In other words, the bug does not seem to be specific to server rendering or hydration.
 function RenderChildrenAfterMounting({ children }) {
   const [didMount, setDidMount] = useState(false);
   useEffect(() => setDidMount(true), []);
